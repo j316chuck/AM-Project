@@ -1,0 +1,30 @@
+Model: 
+    class MyModel(Model):
+        #To Do: add way to make inputs drawn from probability simplex
+        def __init__(self):
+            super(MyModel, self).__init__()
+            self.d1 = Dense(500, name='d1')
+            self.r1 = Activation('relu', name = 'r1')
+            self.d2 = Dense(100, name='d2')
+            self.r2 = Activation('relu', name = 'r1')
+            self.d3 = Dense(1, name='d3')
+    Epochs 30, Learning Rate: 0.001
+
+    Test Loss: 0.04
+
+Model: 
+    class MyModel(Model):
+        #To Do: add way to make inputs drawn from probability simplex
+        def __init__(self):
+            super(MyModel, self).__init__()
+            self.reshape = Reshape((-1, 714, 4), name = 'reshape')
+            self.softmax = Softmax(axis=-1, name = 's1')
+            self.flatten = Flatten()
+            self.d1 = Dense(500, name='d1')
+            self.r1 = Activation('relu', name = 'r1')
+            self.d2 = Dense(100, name='d2')
+            self.r2 = Activation('relu', name = 'r1')
+            self.d3 = Dense(1, name='d3')
+     Epochs 30, Learning Rate: 0.0003
+     
+     Test Loss: 0.03
